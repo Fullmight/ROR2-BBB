@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\RoR2Modding\\Vs stuff\\R2Boilerplate-master\\R2Boilerplate-master\\ExamplePlugin\\BetterBalancedSurvivors.csproj": {}
+    "F:\\RoR2Modding\\Vs stuff\\New Repo Attempt\\ROR2-BBB\\BetterBalancedSurvivors\\BetterBalancedSurvivors.csproj": {}
   },
   "projects": {
-    "F:\\RoR2Modding\\Vs stuff\\R2Boilerplate-master\\R2Boilerplate-master\\ExamplePlugin\\BetterBalancedSurvivors.csproj": {
+    "F:\\RoR2Modding\\Vs stuff\\New Repo Attempt\\ROR2-BBB\\BetterBalancedSurvivors\\BetterBalancedSurvivors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\RoR2Modding\\Vs stuff\\R2Boilerplate-master\\R2Boilerplate-master\\ExamplePlugin\\BetterBalancedSurvivors.csproj",
+        "projectUniqueName": "F:\\RoR2Modding\\Vs stuff\\New Repo Attempt\\ROR2-BBB\\BetterBalancedSurvivors\\BetterBalancedSurvivors.csproj",
         "projectName": "BetterBalancedSurvivors",
-        "projectPath": "F:\\RoR2Modding\\Vs stuff\\R2Boilerplate-master\\R2Boilerplate-master\\ExamplePlugin\\BetterBalancedSurvivors.csproj",
+        "projectPath": "F:\\RoR2Modding\\Vs stuff\\New Repo Attempt\\ROR2-BBB\\BetterBalancedSurvivors\\BetterBalancedSurvivors.csproj",
         "packagesPath": "C:\\Users\\yakri\\.nuget\\packages\\",
-        "outputPath": "F:\\RoR2Modding\\Vs stuff\\R2Boilerplate-master\\R2Boilerplate-master\\ExamplePlugin\\obj\\",
+        "outputPath": "F:\\RoR2Modding\\Vs stuff\\New Repo Attempt\\ROR2-BBB\\BetterBalancedSurvivors\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
