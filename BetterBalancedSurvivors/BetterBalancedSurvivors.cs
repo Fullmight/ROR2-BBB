@@ -19,7 +19,7 @@ namespace BetterBalancedSurvivors
     //This attribute is required, and lists metadata for your plugin.
     //The GUID should be a unique ID for this plugin, which is human readable (as it is used in places like the config). I like to use the java package notation, which is "com.[your name here].[your plugin name here]"
     //The name is the name of the plugin that's displayed on load, and the version number just specifies what version the plugin is.
-    [BepInPlugin("com.yakri.betterbalancedsurvivors", "BetterBalancedSurvivors", "1.0.1")]
+    [BepInPlugin("com.yakri.betterbalancedsurvivors", "BetterBalancedSurvivors", "1.1.0")]
 
     //This is the main declaration of our plugin class. BepInEx searches for all classes inheriting from BaseUnityPlugin to initialize on startup.
     //BaseUnityPlugin itself inherits from MonoBehaviour, so you can use this as a reference for what you can declare and use in your plugin class: https://docs.unity3d.com/ScriptReference/MonoBehaviour.html
@@ -40,43 +40,53 @@ namespace BetterBalancedSurvivors
 
 
                 ///commando
-                var commando = R2API.SurvivorAPI.SurvivorDefinitions[0];
-                var cBody1 = commando.bodyPrefab.GetComponent<CharacterBody>();
-                {
-                    cBody1.baseMoveSpeed = 7.5f;
-                    cBody1.baseMaxHealth = 120f;
-                    cBody1.baseRegen = 1.5f;
-                    cBody1.baseJumpPower = 15f;
-                    cBody1.baseAcceleration = 80f;
-                    cBody1.baseDamage = 12f;
-                    cBody1.baseAttackSpeed = 1.15f;
-                    cBody1.baseCrit = 1f;
-                    cBody1.baseArmor = 5f;
+                //var commando = R2API.SurvivorAPI.SurvivorDefinitions[0];
+                var cBody1 = FetchBody("commando");//commando.bodyPrefab.GetComponent<CharacterBody>();
+                if(cBody1 != null)
+                { 
+                    {
+                        cBody1.baseMoveSpeed = 7.5f;
+                        cBody1.baseMaxHealth = 120f;
+                        cBody1.baseRegen = 1.5f;
+                        cBody1.baseJumpPower = 15f;
+                        cBody1.baseAcceleration = 80f;
+                        cBody1.baseDamage = 12f;
+                        cBody1.baseAttackSpeed = 1.2f;
+                        cBody1.baseCrit = 1f;
+                        cBody1.baseArmor = 5f;
+                    }
                 }
                 ///engineer
-                var engineer = R2API.SurvivorAPI.SurvivorDefinitions[1];
-                var cBody2 = engineer.bodyPrefab.GetComponent<CharacterBody>();
+                //var engineer = R2API.SurvivorAPI.SurvivorDefinitions[1];
+                var cBody2 = FetchBody("engineer");//engineer.bodyPrefab.GetComponent<CharacterBody>();
+                if (cBody2 != null)
                 {
-                    cBody2.baseMoveSpeed = 7f;
-                    cBody2.baseMaxHealth = 130f;
-                    cBody2.baseDamage = 13f;
-                    cBody2.baseArmor = 10f;
+                    {
+                        cBody2.baseMoveSpeed = 7f;
+                        cBody2.baseMaxHealth = 130f;
+                        cBody2.baseDamage = 13f;
+                        cBody2.baseArmor = 10f;
+                    }
                 }
+
                 ///huntress
-                var huntress = R2API.SurvivorAPI.SurvivorDefinitions[2];
-                var cBody3 = huntress.bodyPrefab.GetComponent<CharacterBody>();
+                //var huntress = R2API.SurvivorAPI.SurvivorDefinitions[2];
+                var cBody3 = FetchBody("huntress");
+                if (cBody3 != null)
                 {
-                    cBody3.baseMoveSpeed = 8f;
-                    cBody3.baseMaxHealth = 110f;
-                    cBody3.baseRegen = 1.5f;
-                    cBody3.baseMaxShield = 0f;
-                    cBody3.levelMaxShield = 0f;
-                    cBody3.baseJumpPower = 16f;
-                    cBody3.baseAcceleration = 100f;
-                    cBody3.baseDamage = 13f;
-                    cBody3.levelDamage = 2.6f;
-                    cBody3.baseAttackSpeed = 1f;
-                    cBody3.baseCrit = 10f;
+                    {
+                        cBody3.baseMoveSpeed = 8f;
+                        cBody3.baseMaxHealth = 110f;
+                        cBody3.baseRegen = 1.5f;
+                        cBody3.baseMaxShield = 0f;
+                        cBody3.levelMaxShield = 0f;
+                        cBody3.baseJumpPower = 16f;
+                        cBody3.baseAcceleration = 100f;
+                        cBody3.baseDamage = 13f;
+                        cBody3.levelDamage = 2.6f;
+                        cBody3.baseAttackSpeed = 1f;
+                        cBody3.baseCrit = 10f;
+                    }
                 }
                 /* bandit
                 characterTemp = R2API.SurvivorAPI.SurvivorDefinitions[3];
@@ -93,47 +103,56 @@ namespace BetterBalancedSurvivors
                     cBody.baseArmor = 5f;
                 }*/
                 ///artificer / Mage
-                var artificer = R2API.SurvivorAPI.SurvivorDefinitions[3];
-                var cBody5 = artificer.bodyPrefab.GetComponent<CharacterBody>();
+                //var artificer = R2API.SurvivorAPI.SurvivorDefinitions[3];
+                var cBody5 = FetchBody("artificer");//artificer.bodyPrefab.GetComponent<CharacterBody>();
+                if (cBody5 != null)
                 {
-                    cBody5.baseMoveSpeed = 7f;
-                    cBody5.baseMaxHealth = 100f;
-                    cBody5.baseRegen = 1.0f;
-                    cBody5.baseMaxShield = 0f;
-                    cBody5.levelMaxShield = 0f;
-                    cBody5.baseJumpPower = 14f;
-                    cBody5.baseAcceleration = 60f;
-                    cBody5.baseDamage = 16f;
-                    cBody5.baseAttackSpeed = 1f;
-                    cBody5.baseCrit = 1f;
-                    cBody5.baseArmor = 1f;
-                    cBody5.levelDamage = 3.2f;
+                    {
+                        cBody5.baseMoveSpeed = 7f;
+                        cBody5.baseMaxHealth = 100f;
+                        cBody5.baseRegen = 1.0f;
+                        cBody5.baseMaxShield = 0f;
+                        cBody5.levelMaxShield = 0f;
+                        cBody5.baseJumpPower = 14f;
+                        cBody5.baseAcceleration = 60f;
+                        cBody5.baseDamage = 16f;
+                        cBody5.baseAttackSpeed = 1f;
+                        cBody5.baseCrit = 1f;
+                        cBody5.baseArmor = 1f;
+                        cBody5.levelDamage = 3.2f;
+                    }
                 }
                 ///mercenary
-                var mercenary = R2API.SurvivorAPI.SurvivorDefinitions[4];
-                var cBody6 = mercenary.bodyPrefab.GetComponent<CharacterBody>();
+                //var mercenary = R2API.SurvivorAPI.SurvivorDefinitions[4];
+                var cBody6 = FetchBody("mercenary");//mercenary.bodyPrefab.GetComponent<CharacterBody>();
+                if (cBody6 != null)
                 {
-                    cBody6.baseMoveSpeed = 9f;
-                    cBody6.baseMaxHealth = 160f;
-                    cBody6.baseRegen = 3f;
-                    cBody6.baseJumpPower = 19f;
-                    cBody6.baseAcceleration = 100f;
-                    cBody6.baseDamage = 14f;
-                    cBody6.baseAttackSpeed = 1.05f;
-                    cBody6.baseCrit = 15f;
-                    cBody6.baseArmor = 5f;
-                    cBody6.levelDamage = 2.8f;
+                    {
+                        cBody6.baseMoveSpeed = 9f;
+                        cBody6.baseMaxHealth = 160f;
+                        cBody6.baseRegen = 3f;
+                        cBody6.baseJumpPower = 19f;
+                        cBody6.baseAcceleration = 100f;
+                        cBody6.baseDamage = 14f;
+                        cBody6.baseAttackSpeed = 1.05f;
+                        cBody6.baseCrit = 15f;
+                        cBody6.baseArmor = 5f;
+                        cBody6.levelDamage = 2.8f;
+                    }
                 }
                 ///Mul-T 
-                /*
-                var MulT = R2API.SurvivorAPI.SurvivorDefinitions[5];
-                var cBody7 = MulT.bodyPrefab.GetComponent<CharacterBody>();
+                //var MulT = R2API.SurvivorAPI.SurvivorDefinitions[5];
+                /*var cBody7 = FetchBody("mul-t");//MulT.bodyPrefab.GetComponent<CharacterBody>();
+                if (cBody7 != null)
                 {
-                    cBody7.baseMaxHealth = 207f;
-                    cBody7.baseMoveSpeed = 8f;
-                    cBody7.baseDamage = 12f;
-                    cBody7.baseRegen = 1.5f;
+                    {
+                        cBody7.baseMaxHealth = 200f;
+                        cBody7.baseMoveSpeed = 7f;
+                        cBody7.baseDamage = 12f;
+                        cBody7.baseRegen = 1.5f;
+                    }
                 }*/
+
                 /*
                 var survivor = new SurvivorDef
                 {
@@ -149,11 +168,28 @@ namespace BetterBalancedSurvivors
                 R2API.SurvivorAPI.SurvivorDefinitions.Insert(3, survivor);*/
             };
         }
-
-        //The Update() method is run on every frame of the game.
-        public void Update()
+        /// <summary>
+        /// Searches by displayed survivor name and accesses their CharacterBody
+        /// component in order to edit stats on it.
+        /// Theoretically works with modding characters.
+        /// </summary>
+        /// <param name="charName"></param>
+        /// <returns></returns>
+        public CharacterBody FetchBody(String charName)
         {
+            CharacterBody returnChar = null;
+            var survArr = R2API.SurvivorAPI.SurvivorDefinitions;
 
+            for (int i = 0; i < survArr.Count; i++)
+            {
+                if(survArr[i].displayNameToken.ToLower() == charName)
+                {
+                    returnChar = survArr[i].bodyPrefab.GetComponent<CharacterBody>();
+                }
+            }
+
+            return returnChar;
         }
+        
     }
 }
