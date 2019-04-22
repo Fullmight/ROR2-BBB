@@ -113,9 +113,9 @@ namespace BetterBalancedSurvivors
                         cBody5.baseRegen = 1.0f;
                         cBody5.baseMaxShield = 0f;
                         cBody5.levelMaxShield = 0f;
-                        cBody5.baseJumpPower = 14f;
+                        cBody5.baseJumpPower = 16f;
                         cBody5.baseAcceleration = 60f;
-                        cBody5.baseDamage = 16f;
+                        cBody5.baseDamage = 14f;
                         cBody5.baseAttackSpeed = 1f;
                         cBody5.baseCrit = 1f;
                         cBody5.baseArmor = 1f;
@@ -138,6 +138,25 @@ namespace BetterBalancedSurvivors
                         cBody6.baseCrit = 15f;
                         cBody6.baseArmor = 5f;
                         cBody6.levelDamage = 2.8f;
+                    }
+                }
+                ///mercenary
+                //var mercenary = R2API.SurvivorAPI.SurvivorDefinitions[4];
+                var cBody7 = FetchBody("bandit");//mercenary.bodyPrefab.GetComponent<CharacterBody>();
+                if (cBody7 != null)
+                {
+                    {
+                        cBody7.baseMoveSpeed = 7.5f;
+                        //cBody6.baseMaxHealth = 100f;
+                        //cBody6.baseRegen = 1.5f;
+                        //cBody6.baseJumpPower = 16f;
+                        //cBody6.baseAcceleration = 100f;
+                        cBody7.baseDamage = 14f;
+                        //cBody6.baseAttackSpeed = 1.00f;
+                        cBody7.baseCrit = 20f;
+                        //cBody6.baseArmor = 1f;
+                        cBody7.levelDamage = 2.6f;
+                        //cBody7.
                     }
                 }
                 ///Mul-T 
