@@ -65,7 +65,7 @@ namespace BetterBalancedSurvivors
                         cBody2.baseMoveSpeed = 7f;
                         cBody2.baseMaxHealth = 130f;
                         cBody2.baseDamage = 13f;
-                        cBody2.baseArmor = 10f;
+                        cBody2.baseArmor = 8f;
                     }
                 }
 
