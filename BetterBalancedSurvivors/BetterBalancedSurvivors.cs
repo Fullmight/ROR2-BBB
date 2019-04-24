@@ -49,11 +49,11 @@ namespace BetterBalancedSurvivors
                         cBody1.baseMaxHealth = 120f;
                         cBody1.baseRegen = 1.5f;
                         cBody1.baseJumpPower = 15f;
-                        cBody1.baseAcceleration = 80f;
+                        //cBody1.baseAcceleration = 80f;
                         cBody1.baseDamage = 12f;
-                        cBody1.baseAttackSpeed = 1.2f;
-                        cBody1.baseCrit = 1f;
-                        cBody1.baseArmor = 5f;
+                        cBody1.baseAttackSpeed = 1.10f;
+                        //cBody1.baseCrit = 1f;
+                        //cBody1.baseArmor = 5f;
                     }
                 }
                 ///engineer
@@ -62,10 +62,10 @@ namespace BetterBalancedSurvivors
                 if (cBody2 != null)
                 {
                     {
-                        cBody2.baseMoveSpeed = 7f;
-                        cBody2.baseMaxHealth = 130f;
-                        cBody2.baseDamage = 13f;
-                        cBody2.baseArmor = 8f;
+                        //cBody2.baseMoveSpeed = 7f;
+                        //cBody2.baseMaxHealth = 130f;
+                        //cBody2.baseDamage = 13f;
+                        //cBody2.baseArmor = 8f;
                     }
                 }
 
@@ -115,11 +115,11 @@ namespace BetterBalancedSurvivors
                         cBody5.levelMaxShield = 0f;
                         cBody5.baseJumpPower = 16f;
                         cBody5.baseAcceleration = 60f;
-                        cBody5.baseDamage = 14f;
+                        cBody5.baseDamage = 13f;
                         cBody5.baseAttackSpeed = 1f;
                         cBody5.baseCrit = 1f;
                         cBody5.baseArmor = 1f;
-                        cBody5.levelDamage = 3.2f;
+                        cBody5.levelDamage = 3.0f;
                     }
                 }
                 ///mercenary
@@ -130,14 +130,14 @@ namespace BetterBalancedSurvivors
                     {
                         cBody6.baseMoveSpeed = 9f;
                         cBody6.baseMaxHealth = 160f;
-                        cBody6.baseRegen = 3f;
+                        cBody6.baseRegen = 2.5f;
                         cBody6.baseJumpPower = 19f;
                         cBody6.baseAcceleration = 100f;
-                        cBody6.baseDamage = 14f;
+                        cBody6.baseDamage = 13f;
                         cBody6.baseAttackSpeed = 1.05f;
                         cBody6.baseCrit = 15f;
                         cBody6.baseArmor = 5f;
-                        cBody6.levelDamage = 2.8f;
+                        cBody6.levelDamage = 2.7f;
                     }
                 }
                 ///mercenary
