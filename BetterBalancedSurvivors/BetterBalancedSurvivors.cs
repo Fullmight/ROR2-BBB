@@ -65,7 +65,7 @@ namespace BetterBalancedSurvivors
                         cBody2.baseMoveSpeed = 7f;
                         cBody2.baseMaxHealth = 130f;
                         cBody2.baseDamage = 13f;
-                        cBody2.baseArmor = 8f;
+                        cBody2.baseArmor = 10f;
                     }
                 }
 
@@ -108,18 +108,18 @@ namespace BetterBalancedSurvivors
                 if (cBody5 != null)
                 {
                     {
-                        cBody5.baseMoveSpeed = 7f;
+                        //cBody5.baseMoveSpeed = 7f;
                         cBody5.baseMaxHealth = 100f;
                         cBody5.baseRegen = 1.0f;
                         cBody5.baseMaxShield = 0f;
                         cBody5.levelMaxShield = 0f;
                         cBody5.baseJumpPower = 16f;
-                        cBody5.baseAcceleration = 60f;
-                        cBody5.baseDamage = 14f;
-                        cBody5.baseAttackSpeed = 1f;
-                        cBody5.baseCrit = 1f;
-                        cBody5.baseArmor = 1f;
-                        cBody5.levelDamage = 3.2f;
+                        //cBody5.baseAcceleration = 60f;
+                        cBody5.baseDamage = 15f;
+                        //cBody5.baseAttackSpeed = 1f;
+                        //cBody5.baseCrit = 1f;
+                        //cBody5.baseArmor = 1f;
+                        cBody5.levelDamage = 3.4f;
                     }
                 }
                 ///mercenary
@@ -161,16 +161,16 @@ namespace BetterBalancedSurvivors
                 }
                 ///Mul-T 
                 //var MulT = R2API.SurvivorAPI.SurvivorDefinitions[5];
-                /*var cBody7 = FetchBody("mul-t");//MulT.bodyPrefab.GetComponent<CharacterBody>();
+                var cBody8 = FetchBody("mul-t");//MulT.bodyPrefab.GetComponent<CharacterBody>();
                 if (cBody7 != null)
                 {
                     {
-                        cBody7.baseMaxHealth = 200f;
-                        cBody7.baseMoveSpeed = 7f;
-                        cBody7.baseDamage = 12f;
-                        cBody7.baseRegen = 1.5f;
+                        ///cBody7.baseMaxHealth = 200f;
+                        cBody8.baseMoveSpeed = 8f;
+                        cBody8.baseDamage = 12f;
+                        cBody8.baseRegen = 1.5f;
                     }
-                }*/
+                }
 
                 /*
                 var survivor = new SurvivorDef
