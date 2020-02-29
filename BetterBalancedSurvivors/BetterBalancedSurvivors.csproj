@@ -1,13 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>F:\RoR2Modding\Vs stuff\New Repo Attempt\ROR2-BBB\Backup1\</UpgradeBackupLocation>
+    <OldToolsVersion>15.0</OldToolsVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Remove="Class1.cs" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\libs\Assembly-CSharp.dll</HintPath>
@@ -268,5 +268,4 @@
       <HintPath>..\libs\Zio.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>
